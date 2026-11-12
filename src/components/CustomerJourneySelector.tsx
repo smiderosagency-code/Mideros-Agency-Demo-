@@ -41,6 +41,11 @@ export const CustomerJourneySelector: React.FC<CustomerJourneySelectorProps> = (
                   src={ASSET_IMAGES.bedroomClean}
                   alt="Spotless residential master bedroom and living room"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
+                  onError={(e) => {
+                    e.currentTarget.src = '/images/bedroom-serene-clean.jpg';
+                  }}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#101C35]/80 via-[#101C35]/20 to-transparent" />
@@ -100,6 +105,11 @@ export const CustomerJourneySelector: React.FC<CustomerJourneySelectorProps> = (
                   src={ASSET_IMAGES.commercialOffice}
                   alt="Modern commercial office space in Oklahoma City"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
+                  onError={(e) => {
+                    e.currentTarget.src = '/images/commercial-office-clean.jpg';
+                  }}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#101C35]/80 via-[#101C35]/20 to-transparent" />

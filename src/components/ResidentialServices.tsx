@@ -75,6 +75,14 @@ export const ResidentialServices: React.FC<ResidentialServicesProps> = ({
                       src={service.image}
                       alt={service.title}
                       referrerPolicy="no-referrer"
+                      loading="lazy"
+                      decoding="async"
+                      onError={(e) => {
+                        // Fallback to .jpg if .webp cannot be decoded
+                        if (e.currentTarget.src.endsWith('.webp')) {
+                          e.currentTarget.src = e.currentTarget.src.replace('.webp', '.jpg');
+                        }
+                      }}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#101C35]/70 via-transparent to-transparent" />

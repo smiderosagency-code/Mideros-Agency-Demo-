@@ -27,6 +27,11 @@ export const CommercialCleaning: React.FC<CommercialCleaningProps> = ({
                 src={ASSET_IMAGES.commercialOffice}
                 alt="Sunlit executive commercial office space in Oklahoma City"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  e.currentTarget.src = '/images/commercial-office-clean.jpg';
+                }}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#101C35]/80 via-transparent to-transparent pointer-events-none" />

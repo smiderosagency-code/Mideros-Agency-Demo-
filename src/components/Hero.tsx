@@ -94,6 +94,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote }) => {
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                 loading="eager"
+                decoding="async"
+                fetchPriority="high"
+                onError={(e) => {
+                  e.currentTarget.src = '/images/hero-okc-home.jpg';
+                }}
               />
               
               {/* Soft vignette overlay */}

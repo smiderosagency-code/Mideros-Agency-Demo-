@@ -15,6 +15,11 @@ export const AboutSection: React.FC = () => {
                 src={ASSET_IMAGES.equipmentCraft}
                 alt="Carefully curated professional cleaning supplies and microfiber cloths"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  e.currentTarget.src = '/images/cleaning-equipment-caddy.jpg';
+                }}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#101C35]/80 via-transparent to-transparent pointer-events-none" />

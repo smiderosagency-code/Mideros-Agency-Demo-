@@ -1,11 +1,11 @@
 import { ServiceDetail, FaqItem, TestimonialItem, ServiceAreaLocation } from '../types';
 
 export const ASSET_IMAGES = {
-  hero: '/src/assets/images/hero_okc_home_1794502398335.jpg',
-  kitchenDeep: '/src/assets/images/kitchen_deep_clean_1794502399105.jpg',
-  commercialOffice: '/src/assets/images/commercial_clean_office_1794502400080.jpg',
-  bedroomClean: '/src/assets/images/bedroom_serene_clean_1794502400455.jpg',
-  equipmentCraft: '/src/assets/images/cleaning_equipment_caddy_1794502400673.jpg',
+  hero: '/images/hero-okc-home.webp',
+  kitchenDeep: '/images/kitchen-deep-clean.webp',
+  commercialOffice: '/images/commercial-office-clean.webp',
+  bedroomClean: '/images/bedroom-serene-clean.webp',
+  equipmentCraft: '/images/cleaning-equipment-caddy.webp',
 };
 
 export const RESIDENTIAL_SERVICES: ServiceDetail[] = [
